@@ -2,4 +2,6 @@
 
 $nome = "Reberte";
 
+echo $nome;
+
 ?>
