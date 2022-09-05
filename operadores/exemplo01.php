@@ -6,7 +6,7 @@ echo $nome . " Martins Farias";
 
 $nome .= ", está praticando";
 
-echo "</br>";
+echo "<br>";
 
 echo $nome;
 ?>
