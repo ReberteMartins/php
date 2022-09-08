@@ -4,7 +4,7 @@ $hierarquia = array(
 
     array(
         'nome_cargo' => 'CEO',
-        'subordinado' => array(
+        'subordinados' => array(
             //Inicio: Diretor Comercial
             array(
                 'nome_cargo' => 'Diretor Comercial',
