@@ -2,15 +2,16 @@
 
 $conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
 
-$conn->beginTransaction()
+$conn->beginTransaction();
 
 $stmt = $conn->prepare("DELETE FROM tb_usuarios WHERE idusuario = ?");
 
-$id = 2;
+$id = 3;
 
 $stmt->execute(array($id));
 
-$conn->rollback();
+//$conn->rollback();
+$conn->commit();
 
 echo "Dados deletados com sucesso!!!";
 
