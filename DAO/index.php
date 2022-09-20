@@ -4,15 +4,23 @@ ini_set('display_errors', 1);
 
 require_once("config.php");
 
-//$sql = new Sql();
+//CARREGA UMA LISTA DE USUÁRIOS
+//$root = new Usuario();
+//$root->loadById(2);
+//echo $root;
 
-//$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+//CARREGA UMA LISTA DE USUARIOS
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
-//echo json_encode($usuarios);
+//CARREGA UMA LISTA DE USUAIOS BUSCANDO PELO LOGIN
+//$search = Usuario::search("r");
+//echo json_encode($search);
 
-$root = new Usuario();
+//CARREGA UM USUARIO, USANDO UM LOGIN E A SENHA
+$usuario = new Usuario();
+$usuario->login("Jose", "Senha nova");
 
-$root->loadById(2);
+echo $usuario;
 
-echo $root;
 ?>
