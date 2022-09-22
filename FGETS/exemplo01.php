@@ -8,7 +8,9 @@ if (file_exists($filename)) {
 
     $headers = explode(",",fgets($file));
 
-    var_dump($headers);
+    while ($row = fgets($file)) {
+        # code...
+    }
 }
 
 ?>
