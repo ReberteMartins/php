@@ -2,7 +2,7 @@
 
 $email = $_POST["inputEmail"];
 
-var_dump($_POST);
+//var_dump($_POST);
 
 $ch = curl_init();
 
@@ -12,7 +12,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array(
     "secret"=>"6Lfnij4iAAAAAKC3mdB-Z5_d30xHffU-iwoJnG3a",
-    "response"=>$_POST["g_recaptcha-response"],
+    "response"=>$_POST["g-recaptcha-response"],
     "remoteip"=>$_SERVER["REMOTE_ADDR"]
 )));
 
@@ -22,18 +22,17 @@ $recaptcha = json_decode(curl_exec($ch), true);
 
 curl_close($ch);
 
-var_dump($ch);
+//var_dump($recaptcha);
 
-/*
-if ($recaptcha["sucess"] === true){
+
+if ($recaptcha["success"] === true){
 
     echo "OK: ".$_POST["inputEmail"];
 
 } else {
 
-    //header("Location: exemplo04.php");
-    echo "Tente novamente";
+    header("Location: exemplo04.php");
 
 }
-*/
+
 ?>
